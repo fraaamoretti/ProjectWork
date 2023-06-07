@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrello.component.css']
 })
 export class CarrelloComponent {
-
+  totale: number = 0;
 }
