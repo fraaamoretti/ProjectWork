@@ -8,6 +8,7 @@ import { ProdottiService } from './service/prodottiService';
 import { CarrelloComponent } from './component/carrello/carrello.component';
 import { TroncaPipe } from './pipe/tronca.pipe';
 import { BannerComponent } from './component/banner/banner.component';
+import { DettaglioProdottoComponent } from './component/dettaglio-prodotto/dettaglio-prodotto.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BannerComponent } from './component/banner/banner.component';
     ProdottoComponent,
     CarrelloComponent,
     TroncaPipe,
-    BannerComponent
+    BannerComponent,
+    DettaglioProdottoComponent
   ],
   imports: [
     BrowserModule,
