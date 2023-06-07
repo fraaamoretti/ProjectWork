@@ -4,12 +4,17 @@ import { Carrello } from "../model/carrello";
 
 @Injectable()
 export class ProdottiService {
+
     private magazzino: Prodotto[] = [
-        new Prodotto("La divina commedia", Categorie.Libri, 12, ['lalala'], 'libro bello bello'),
-        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['lalala'], undefined)
+        new Prodotto("La divina commedia", Categorie.Libri, 12, ['../assets/img/doraemon.jpg'], 'lalala'),
+        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['../assets/img/doraemon.jpg'], undefined)
     ]
 
     carrello: Carrello = new Carrello([]);
+
+    get listaProdotti() : Prodotto[]{
+        return this.magazzino;
+    }
 
     aggiungiAlCarrello(prod: Prodotto): void {
         let t = this.carrello.listaProdotti;
