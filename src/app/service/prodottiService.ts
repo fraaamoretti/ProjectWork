@@ -6,8 +6,8 @@ import { Carrello } from "../model/carrello";
 export class ProdottiService {
     path = '../../assets/img/';
     private magazzino: Prodotto[] = [
-        new Prodotto("La divina commedia", Categorie.Libri, 12, ['da fare'], 'Commedia sui tre mondi'),
-        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['da fare'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("La divina commedia", Categorie.Libri, 12, ['promessisposi.jpg'], 'Commedia sui tre mondi'),
+        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['divinacommedia.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
         new Prodotto("Il buio oltre la siepe", Categorie.Libri, 33, ['il-buio-oltre-la-siepe.jpg'], 'Romanzo di Harper Lee'),
         new Prodotto("Peluche Doraemon", Categorie.Giocattoli, 30, ['doraemon.jpg'], 'Pelouche doraemon 18cm'),
         new Prodotto("Monopoly", Categorie.Giocattoli, 28, ['monopoly.jpg'], 'Monopoly classico'),
