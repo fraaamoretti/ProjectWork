@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ProdottoComponent } from './component/prodotto/prodotto.component';
 import { ProdottiService } from './service/prodottiService';
 import { CarrelloComponent } from './component/carrello/carrello.component';
+import { TroncaPipe } from './pipe/tronca.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdottoComponent,
-    CarrelloComponent
+    CarrelloComponent,
+    TroncaPipe
   ],
   imports: [
     BrowserModule,

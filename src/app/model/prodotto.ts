@@ -1,5 +1,7 @@
 export class Prodotto
 {
+    preferito = false;
+
     constructor(public nome:string, public tipologia:string, public prezzo:number, public img:string[], public descrizione?:string)
     {
         if(this.descrizione === undefined)
