@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Prodotto } from 'src/app/model/prodotto';
+import { ProdottiService } from 'src/app/service/prodottiService';
 
 @Component({
   selector: 'app-prodotto',
@@ -10,6 +11,7 @@ export class ProdottoComponent {
   @Input()
   prodotto? : Prodotto;
   preferito = false;
+  service : ProdottiService = new ProdottiService();
 
   modificaPreferito()
   {

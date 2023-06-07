@@ -3,11 +3,11 @@ import { Prodotto } from "./prodotto";
 export class Carrello
 {
     listaProdotti : [Prodotto, number][] = [];
-    prezzo_totale : number;
+    prezzoTotale : number;
 
     constructor(listaProdotti : [Prodotto, number][])
     {
         this.listaProdotti = listaProdotti;
-        this.prezzo_totale = 0;
+        this.prezzoTotale = 0;
     }
 }
