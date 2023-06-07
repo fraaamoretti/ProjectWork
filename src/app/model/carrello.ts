@@ -2,9 +2,9 @@ import { Prodotto } from "./prodotto";
 
 export class Carrello
 {
-    listaProdotti : Prodotto[] = [];
+    listaProdotti : [Prodotto, number][] = [];
 
-    constructor(listaProdotti : Prodotto[])
+    constructor(listaProdotti : [Prodotto, number][])
     {
         this.listaProdotti = listaProdotti;
     }
