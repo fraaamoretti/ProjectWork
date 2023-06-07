@@ -15,3 +15,5 @@
     background: rgb(135,168,120);
     background: linear-gradient(310deg, rgba(135,168,120,1) 65%, rgba(219,249,184,1) 100%);
 }
+
+.txt-no-deco {text-decoration: none;}
