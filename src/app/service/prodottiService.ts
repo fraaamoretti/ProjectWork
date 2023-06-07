@@ -4,7 +4,6 @@ import { Carrello } from "../model/carrello";
 
 @Injectable()
 export class ProdottiService {
-    path = '../../assets/img/';
     private magazzino: Prodotto[] = [
         new Prodotto("La divina commedia", Categorie.Libri, 12, ['promessisposi.jpg'], 'Commedia sui tre mondi'),
         new Prodotto("I promessi sposi", Categorie.Libri, 14, ['divinacommedia.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
@@ -18,7 +17,7 @@ export class ProdottiService {
         new Prodotto("Mouse Logitech Avanzato", Categorie.Mouse, 40, ['mouseavanzato.jpg'], 'Mouse Superlight'),
         new Prodotto("Mouse ESL Razer", Categorie.Mouse, 80, ['mouseeslrazer.jpg'], 'Mouse Razer Edizione Speciale ESL'),
         new Prodotto("Mouse Mid Cooler Master", Categorie.Mouse, 120, ['mousemidcoolermaster.jpg'], 'Mouse Gaming'),
-        new Prodotto("Mouse PRO Razer", Categorie.Mouse, 420, ['mouseprorazer.jpg'], 'Mouse Pro Razer'),
+        new Prodotto("Mouse PRO Razer", Categorie.Mouse, 420, ['mouseprorazer.jpg'], 'Mouse Pro Razer')
 
         
     ]
