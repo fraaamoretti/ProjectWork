@@ -11,6 +11,7 @@ import { BannerComponent } from './component/banner/banner.component';
 import { DettaglioProdottoComponent } from './component/dettaglio-prodotto/dettaglio-prodotto.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AboutComponent } from './component/about/about.component';
+import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prodotti.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutComponent } from './component/about/about.component';
     BannerComponent,
     DettaglioProdottoComponent,
     NotFoundComponent,
-    AboutComponent
+    AboutComponent,
+    ElencoProdottiComponent
   ],
   imports: [
     BrowserModule,
