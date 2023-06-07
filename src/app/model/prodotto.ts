@@ -2,7 +2,7 @@ export enum Categorie{Mouse, Casa, Libri, Giocattoli}
 
 export class Prodotto
 {
-
+    path = '../../assets/img/';
     preferito = false;
 
     constructor(public nome:string, public categoria:Categorie, public prezzo:number, public img:string[], public descrizione?:string)
