@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProdottoComponent } from './component/prodotto/prodotto.component';
 import { ProdottiService } from './service/prodottiService';
+import { TroncaPipe } from './pipe/tronca.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdottoComponent
+    ProdottoComponent,
+    TroncaPipe
   ],
   imports: [
     BrowserModule,
