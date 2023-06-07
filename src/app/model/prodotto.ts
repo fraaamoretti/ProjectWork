@@ -1,4 +1,4 @@
-enum Categorie{Informatica, Casa}
+export enum Categorie{Informatica, Casa, Libri}
 
 export class Prodotto
 {

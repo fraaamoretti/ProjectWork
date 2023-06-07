@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
-import { Prodotto } from "../model/prodotto";
+import { Categorie, Prodotto } from "../model/prodotto";
 import { Carrello } from "../model/carrello";
 
 @Injectable()
 export class ProdottiService {
     private magazzino: Prodotto[] = [
-        new Prodotto("La divina commedia", "Libri", 12, ['lalala'], 'libro bello bello'),
-        new Prodotto("I promessi sposi", "Libri", 14, ['lalala'], undefined)
+        new Prodotto("La divina commedia", Categorie.Libri, 12, ['lalala'], 'libro bello bello'),
+        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['lalala'], undefined)
     ]
 
     carrello : Carrello = new Carrello([]);
