@@ -1,1 +1,13 @@
-<app-prodotto></app-prodotto>
+<div class="container">
+
+    <div class="d-flex flex-row flex-wrap">
+        <ng-container *ngFor="let p of prodotti">
+            <app-prodotto [prodotto] = "p"></app-prodotto>
+        </ng-container>
+    
+        <ng-container *ngIf = "prodotti.length == 0">
+            <app-not-found></app-not-found>
+        </ng-container>
+    </div>
+
+</div>

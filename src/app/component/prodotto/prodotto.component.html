@@ -15,10 +15,10 @@
 
     <ng-container *ngIf="prodotto; else elseBlock">
         <div class="clickable" (click)="dettaglioProdotto()">
-          <img class="card-img-top" [src] = " '../../../assets/img/' + prodotto.img" [alt]="prodotto.nome">
+          <img class="card-img-top" [src] = " '../../../assets/img/' + prodotto.img" [alt]="'immagine di ' + prodotto.nome">
 
           <div class="card-body">
-            <h2 class="card-title">{{prodotto.nome | tronca:10}}</h2>
+            <h2 class="card-title">{{prodotto.nome | tronca:20}}</h2>
             <h4 class="card-text">{{prodotto.prezzo}}€</h4>
          </div>
         </div>
@@ -48,7 +48,7 @@
   
     <ng-template #elseBlock>
       <div class="card-body">
-        <h2 class="card-title">Libro non valido</h2>
+        <h2 class="card-title">Prodotto non valido</h2>
       </div>
     </ng-template>
   
