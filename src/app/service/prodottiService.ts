@@ -7,10 +7,10 @@ export class ProdottiService {
     
     private magazzino: Prodotto[] = [
         // new Prodotto("La divina commedia", Categorie.Libri, 12, ['divinacommedia.jpg'], 'Commedia sui tre mondi'),
-        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I promessi idioti", Categorie.Libri, 13, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I mancati sposi", Categorie.Libri, 20, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['fantasy1.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi idioti", Categorie.Libri, 13, ['fantasy2.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I mancati sposi", Categorie.Libri, 20, ['giallo1.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi morti", Categorie.Libri, 45, ['giallo2.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
         new Prodotto("I 3 promessi sposi", Categorie.Libri, 3, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
         new Prodotto("Volevano sposarsi, ma lui è islamico", Categorie.Libri, 2, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
         new Prodotto("Come comprare una moglie", Categorie.Libri, 8, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),

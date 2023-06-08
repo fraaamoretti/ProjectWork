@@ -6,7 +6,7 @@
         </div>
 
         <ng-container *ngFor="let p of carrello.listaProdotti">
-           <app-elemento-carrello [prodotto] = "p"></app-elemento-carrello> 
+           <app-elemento-carrello [prodotto] = "p[0]"></app-elemento-carrello> 
         </ng-container>
 
         <ng-container *ngIf = "carrello.listaProdotti.length == 0">
@@ -14,7 +14,7 @@
         </ng-container>
 
         <div class="totProdotti d-flex flex-row justify-content-end mt-3">
-            <h5 class="align-self-end">N. prodotti: {{carrello.listaProdotti.length}}</h5>
+            <h5 class="align-self-end">N. prodotti: {{carrello.numeroProdotti}}</h5>
         </div>
 
     </div>

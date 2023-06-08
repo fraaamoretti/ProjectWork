@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Prodotto } from 'src/app/model/prodotto';
 import { ProdottiService } from 'src/app/service/prodottiService';
 
@@ -8,6 +8,11 @@ import { ProdottiService } from 'src/app/service/prodottiService';
   styleUrls: ['./elemento-carrello.component.css']
 })
 export class ElementoCarrelloComponent {
-  prodotto? : Prodotto;
-  constructor(private prodottiService: ProdottiService){}
+  @Input()
+  prodotto : Prodotto;
+
+
+  constructor(p:Prodotto,private prodottiService: ProdottiService){
+    this.prodotto = p;
+  }
 }
