@@ -15,7 +15,7 @@ export class CarrelloComponent {
 
   constructor(private prodottiService : ProdottiService)
   {
-    this.carrello.listaProdotti = this.prodottiService.getAll();
+    this.carrello.listaProdotti = prodottiService.getListaProdotti();
   }
   
   calcolaTotale() : number

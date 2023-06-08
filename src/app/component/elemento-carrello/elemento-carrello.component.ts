@@ -11,7 +11,7 @@ export class ElementoCarrelloComponent {
   @Input()
   prodotto? : Prodotto;
 
-
-  constructor(private prodottiService: ProdottiService){
+  constructor(public prodottiService: ProdottiService){
+    
   }
 }

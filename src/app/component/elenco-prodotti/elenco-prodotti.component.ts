@@ -13,7 +13,7 @@ export class ElencoProdottiComponent {
 
     constructor(private prodService : ProdottiService)
     {
-        this.prodotti = prodService.listaProdotti;
+        this.prodotti = prodService.magazzino;
     }
 
     cerca(valore: string){
