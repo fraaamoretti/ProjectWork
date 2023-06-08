@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from "@angular/core"; 
+import { ProdottiService } from "src/app/service/prodottiService";
 
 @Component({
     selector : 'app-ricerca',
@@ -13,4 +14,6 @@ export class RicercaComponent{
     cerca() : void {
       this.cercaEvent.emit(this.stringaDiRicerca);
     }
+
+    constructor(public prodottiService:ProdottiService){}
 }

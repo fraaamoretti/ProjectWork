@@ -8,21 +8,24 @@
 <body>
 
     <div class="bgc-gradient-green">
+
         <div class="container d-flex flex-row flex-wrap justify-content-between txt-white">
-            <div class="d-flex flex-row flex-wrap">
-                <h1 class="p-2">{{title}}</h1>
+
+            <div class="d-flex flex-row">
+                <span class="clickable" [routerLink]="['']"><h1 class="p-2">{{title}}</h1></span>
                 <p class="p-2 align-self-center">{{slogan}}</p>
             </div>
+
+
             <div class="d-flex flex-row flex-wrap">
-                <select type="button" class="m-2 btn btn-primary">
-                    <option selected>Categorie</option>
-                        <ng-container *ngFor="let c of prodottiService.getCategorie()">
-                            <option >{{c}}</option>
-                        </ng-container>
-                </select>
-                <app-ricerca class="p-2 align-self-center" (cercaEvent)="cerca($event)"></app-ricerca>
+                
+                <app-ricerca class="align-self-center" (cercaEvent)="cerca($event)"></app-ricerca>
+
             </div>
+
+
         </div>
+
     </div>
 
     <div class="bgc-dark-green mb-3" style="height: 3em;">
