@@ -1,10 +1,5 @@
 .card > a{text-decoration: none; color: black;}
 
-.clickable
-{
-    cursor: pointer;
-}
-
 .card-title{font-size: 1.5em;}
 .card-text{font-size: 1.2em;}
 .card-body > h4 {font-size: 1em};

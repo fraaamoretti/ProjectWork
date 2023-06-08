@@ -1,28 +1,37 @@
-<ng-container *ngIf="prodotto">
+<div class="d-flex flex-row align-items-center justify-content-between m-2 border-bottom">
+    <ng-container *ngIf="prodotto">
 
-    <div class="d-flex flex-row align-items-center justify-content-between m-2 border-bottom">
-
-        <div class="d-flex flex-row align-items-center">
+        <div class="d-flex flex-row align-items-centers">
 
             <div class="scale-02 m-3">
                 <img [src] = "prodotto.img" class="w-100">
             </div>
-            
+
             <div class="d-flex flex-column align-items-start">
-                <h1>{{prodotto.titolo}}</h1>
-                <h5>{{prodotto.autore}}</h5>
+                <h1 class="titolo">{{prodotto.titolo}}</h1>
+                <p class="autore">{{prodotto.autore}}</p>
             </div>
-    
-            <div>
-                + 1 -
-            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+
+            <svg class="clickable"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+
+            <p class="quantity m-3">   1   </p>
+
+            <svg class="clickable" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+            </svg>
+            
         </div>
 
         <div class="text-center">
-            <p class="align-self-start text-center">{{prodotto.prezzo}}€</p>
+            <p class="align-self-start text-center prezzo">{{prodotto.prezzo}}€</p>
         </div>
 
-    </div>
+    </ng-container>
+</div>
     
 
-</ng-container>

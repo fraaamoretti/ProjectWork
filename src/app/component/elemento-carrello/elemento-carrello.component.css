@@ -3,5 +3,25 @@
     width : 10%;
 }
 
-div > h1{font-size: 24px;}
-div > h3{font-size: 18px;}
+.titolo{
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.autore{
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.quantity{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.prezzo{
+    font-size: 18px;
+    line-height: 18px;
+}
