@@ -16,9 +16,9 @@
             <div class="d-flex flex-row flex-wrap">
                 <select type="button" class="m-2 btn btn-primary">
                     <option selected>Categorie</option>
-                  <!--  <ng-container *ngFor="let c of ">
-                        <option >{{c}}</option>
-                    </ng-container> -->
+                        <ng-container *ngFor="let c of prodottiService.getCategorie()">
+                            <option >{{c}}</option>
+                        </ng-container>
                 </select>
                 <app-ricerca class="p-2 align-self-center"></app-ricerca>
             </div>

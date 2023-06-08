@@ -63,14 +63,18 @@ export class ProdottiService {
     getAll() {
         return this.carrello.listaProdotti;
     }
-    getOne(wanted_id: number): Prodotto | any {
-        this.magazzino.forEach(p => {
-            if (p.id == wanted_id) return p;
-            else return;
-        })
+    getOne(wanted_id: number): Prodotto | undefined{
+        return this.magazzino.find(p => p.id == wanted_id);
 
     }
     find(stringaDiRicerca: string): Prodotto[] {
         return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
+    }
+    getCategorie() : string[] {
+        let ar : string[] = [];
+        for(let c of Object.keys(Categorie)) {
+            if(c.length > 3){  ar.push(c) }
+        }
+        return ar;
     }
 }
