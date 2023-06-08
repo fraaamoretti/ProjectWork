@@ -18,11 +18,5 @@ export class Carrello
         return tot;
     }
 
-    quantitàProdotto(prodotto : Prodotto) : number | void
-    {
-        this.listaProdotti.find(p => {
-            if(p[0] === prodotto) return p[1];
-            else return;
-        })
-    }
+    
 }

@@ -6,7 +6,7 @@ import { RouterTestingHarness } from "@angular/router/testing";
 @Injectable()
 export class ProdottiService {
 
-    private magazzino: Prodotto[] = [
+    magazzino: Prodotto[] = [
         new Prodotto(1, "Vita tra i funghi", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
         new Prodotto(2, "Musica dall'alto", "Peter Parker", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
         new Prodotto(3, "La biblioteca", "Zio Paperone", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
@@ -23,21 +23,7 @@ export class ProdottiService {
 
     carrello: Carrello = new Carrello([]);
 
-    get listaProdotti(): Prodotto[] {
-        return this.magazzino;
-    }
-
-    aggiungiAlCarrello(prod: Prodotto): void {/*
-        for (let s = 0; s < this.carrello.listaProdotti.length; s++) {
-            if (this.carrello.listaProdotti[s][0] == prod)
-            {
-                this.carrello.listaProdotti[s][1]++;
-                this.carrello.listaProdotti.forEach(p => console.log(p[1]));
-                return; 
-            }
-        }
-        this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
-        this.carrello.listaProdotti.forEach(p => console.log(p[1]));*/
+    aggiungiAlCarrello(prod: Prodotto): void {
         console.log(this.carrello.listaProdotti.length);
         for (let i = 0; i < this.carrello.listaProdotti.length; i++) {
             if (this.carrello.listaProdotti[i][0] == prod) {
@@ -60,21 +46,36 @@ export class ProdottiService {
             }
         }
     }
-    getAll() {
+
+    getListaProdotti(){
         return this.carrello.listaProdotti;
     }
+
     getOne(wanted_id: number): Prodotto | undefined{
         return this.magazzino.find(p => p.id == wanted_id);
 
     }
+
     find(stringaDiRicerca: string): Prodotto[] {
         return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
     }
+
     getCategorie() : string[] {
         let ar : string[] = [];
         for(let c of Object.keys(Categorie)) {
             if(c.length > 3){  ar.push(c) }
         }
         return ar;
+    }
+
+    prodottoQuantity(prodotto : Prodotto) : string | void
+    {
+        this.carrello.listaProdotti.find(p => {
+            if(p[0] === prodotto)
+            {
+                return p[1];
+            }
+            else return;
+        })
     }
 }
