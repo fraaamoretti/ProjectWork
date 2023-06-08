@@ -73,4 +73,11 @@ export class ProdottiService {
     find(stringaDiRicerca: string): Prodotto[] {
         return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
     }
+    getCategorie() : string[] {
+        let ar : string[] = [];
+        for(let c of Object.keys(Categorie)) {
+            if(c.length > 3){  ar.push(c) }
+        }
+        return ar;
+    }
 }
