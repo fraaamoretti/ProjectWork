@@ -39,23 +39,22 @@ export class ProdottiService {
         return this.magazzino;
     }
 
-    aggiungiAlCarrello(prod: Prodotto): void {
-        let t = this.carrello.listaProdotti;
-        for (let s = 0; s < t.length; s++) {
-            if (t[s][0] == prod) { t[s][1]++; return; }
+    aggiungiAlCarrello(prod: Prodotto): void { 
+        for (let s = 0; s < this.carrello.listaProdotti.length; s++) {
+            if (this.carrello.listaProdotti[s][0] == prod) { this.carrello.listaProdotti[s][1]++;console.log(this.carrello.listaProdotti); return; }
         }
-        t.push([prod, 1]); // in caso non ci sia
+        this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
+        console.log(this.carrello.listaProdotti);
     }
 
     rimuoviDalCarrello(prod: Prodotto, azione: boolean): void {
-        let t = this.carrello.listaProdotti;
-        for (let s = 0; s < t.length; s++) {
-            if (t[s][0] == prod) {
+        for (let s = 0; s < this.carrello.listaProdotti.length; s++) {
+            if (this.carrello.listaProdotti[s][0] == prod) {
                 if (azione) { // tasto X
-                    if (t[s][0] == prod) { t.splice(s, 1); return; } // rimuovo l'elemento
+                    if (this.carrello.listaProdotti[s][0] == prod) { this.carrello.listaProdotti.splice(s, 1); return; } // rimuovo l'elemento
                 }
                 // decrementa
-                if (t[s][1] > 0) t[s][1]--; // controllo che non vada in negativo
+                if (this.carrello.listaProdotti[s][1] > 0) this.carrello.listaProdotti[s][1]--; // controllo che non vada in negativo
                 return;
             }
         }

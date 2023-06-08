@@ -9,24 +9,25 @@ import { ProdottiService } from 'src/app/service/prodottiService';
   styleUrls: ['./carrello.component.css']
 })
 export class CarrelloComponent {
-  
-  carrello: Carrello = new Carrello([]);
 
   constructor(private prodottiService : ProdottiService)
   {
-    this.carrello.listaProdotti.push([new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'), 1]);
+    this.carrello.listaProdotti.push([new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'), 3]);
+    this.carrello.listaProdotti.push([new Prodotto("I promessi morti", Categorie.Libri, 4, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'), 1]);
   }
+
+  carrello: Carrello = this.prodottiService.carrello;
 
   calcolaTotale() : number
   {
-    // this.carrello.listaProdotti.forEach( p => this.carrello.prezzoTotale += (p[1]*p[0].prezzo));//bug da fixare
-    // return this.carrello.prezzoTotale;
-
-    for(let i = 0; i < this.carrello.listaProdotti.length; i++)
-    {
-      this.carrello.prezzoTotale += this.carrello.listaProdotti[i][0].prezzo * this.carrello.listaProdotti[i][1];
-    }
-
+    this.carrello.prezzoTotale = 0;
+    this.carrello.listaProdotti.forEach( p => this.carrello.prezzoTotale += (p[1]*p[0].prezzo));//fixato
     return this.carrello.prezzoTotale;
+  }
+
+  contaProdotti() : number
+  {
+    //this.carrello.listaProdotti.length = 0;
+    return this.carrello.listaProdotti.length;
   }
 }
