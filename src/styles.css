@@ -1,3 +1,4 @@
+/*COLORS*/
 .txt-black{ color :#343434;}
 .txt-white{ color :#F5F5F5;}
 .txt-green{ color :#87A878;}
@@ -16,4 +17,13 @@
     background: linear-gradient(310deg, rgba(135,168,120,1) 65%, rgba(219,249,184,1) 100%);
 }
 
+
+/*UTILITIES*/
+
 .txt-no-deco {text-decoration: none;}
+
+.beauty-border
+{
+    border: 1px black solid;
+    border-radius: 10px;
+}

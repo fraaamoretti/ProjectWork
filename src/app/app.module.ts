@@ -12,6 +12,7 @@ import { DettaglioProdottoComponent } from './component/dettaglio-prodotto/detta
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AboutComponent } from './component/about/about.component';
 import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prodotti.component';
+import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferma-pagamento.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prod
     DettaglioProdottoComponent,
     NotFoundComponent,
     AboutComponent,
-    ElencoProdottiComponent
+    ElencoProdottiComponent,
+    ConfermaPagamentoComponent
   ],
   imports: [
     BrowserModule,

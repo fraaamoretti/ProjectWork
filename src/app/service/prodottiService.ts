@@ -4,6 +4,7 @@ import { Carrello } from "../model/carrello";
 
 @Injectable()
 export class ProdottiService {
+    
     private magazzino: Prodotto[] = [
         // new Prodotto("La divina commedia", Categorie.Libri, 12, ['divinacommedia.jpg'], 'Commedia sui tre mondi'),
          new Prodotto("I promessi sposi", Categorie.Libri, 14, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
@@ -41,9 +42,11 @@ export class ProdottiService {
 
     aggiungiAlCarrello(prod: Prodotto): void {
         let t = this.carrello.listaProdotti;
+
         for (let s = 0; s < t.length; s++) {
             if (t[s][0] == prod) { t[s][1]++; return; }
         }
+
         t.push([prod, 1]); // in caso non ci sia
     }
 
