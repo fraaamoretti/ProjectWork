@@ -7,18 +7,18 @@ import { RouterTestingHarness } from "@angular/router/testing";
 export class ProdottiService {
 
     private magazzino: Prodotto[] = [
-        new Prodotto(1, "Vita tra i funghi", "a", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
-        new Prodotto(2, "Musica dall'alto", "a", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
-        new Prodotto(3, "La biblioteca", "a", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
-        new Prodotto(4, "Dov'è Ambda", "a", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
-        new Prodotto(5, "Ecco qui Ambda", "a", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
-        new Prodotto(6, "L'amore non voluto", "a", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
-        new Prodotto(7, "Amore sul treno", "a", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
-        new Prodotto(8, "Viaggio su Giove", "a", Categorie.Science, 27, ["science1.png"], "Un libro di "),
-        new Prodotto(9, "Cosa c'è su Marte", "a", Categorie.Science, 16, ["science2.png"], "Un libro di "),
-        new Prodotto(10, "Atlantide nell'universo", "a", Categorie.Science, 14, ["science3.png"], "Un libro di "),
-        new Prodotto(11, "L'università di mio padre", "a", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
-        new Prodotto(12, "Indipendenti dalla natura", "a", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
+        new Prodotto(1, "Vita tra i funghi", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
+        new Prodotto(2, "Musica dall'alto", "Peter Parker", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
+        new Prodotto(3, "La biblioteca", "Zio Paperone", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
+        new Prodotto(4, "Dov'è Ambda", "Peppa Pig", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
+        new Prodotto(5, "Ecco qui Ambda", "Peppa Pig", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
+        new Prodotto(6, "L'amore non voluto", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
+        new Prodotto(7, "L'Amore sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
+        new Prodotto(8, "Viaggio su Giove", "Mickey Mouse", Categorie.Science, 27, ["science1.png"], "Un libro di "),
+        new Prodotto(9, "Cosa c'è su Marte", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"], "Un libro di "),
+        new Prodotto(10, "L'Atlantide nell'universo", "Scooby Doo", Categorie.Science, 14, ["science3.png"], "Un libro di "),
+        new Prodotto(11, "L'università di mio padre", "Jerry Mouse", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
+        new Prodotto(12, "Indipendenti dalla natura", "Winnie the Pooh", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
     ]
 
     carrello: Carrello = new Carrello([]);
