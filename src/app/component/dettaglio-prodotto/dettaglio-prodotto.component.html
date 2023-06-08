@@ -1,2 +1,7 @@
-<a [routerLink]="['/']" class="text-dark">&lt;- Ritorna alla lista</a>
-<app-prodotto [prodotto]="prodotto"></app-prodotto>
+<div class="d-flex">
+    <app-prodotto [prodotto]="prodotto"></app-prodotto>
+    <div>
+        <h2>{{prodotto?.titolo}}</h2>
+        <h3>{{prodotto?.autore}}</h3>
+    </div>
+</div>

@@ -63,11 +63,8 @@ export class ProdottiService {
     getAll() {
         return this.carrello.listaProdotti;
     }
-    getOne(wanted_id: number): Prodotto | any {
-        this.magazzino.forEach(p => {
-            if (p.id == wanted_id) return p;
-            else return;
-        })
+    getOne(wanted_id: number): Prodotto | undefined{
+        return this.magazzino.find(p => p.id == wanted_id);
 
     }
     find(stringaDiRicerca: string): Prodotto[] {
