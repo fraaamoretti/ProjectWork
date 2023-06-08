@@ -17,4 +17,12 @@ export class Carrello
         this.listaProdotti.forEach(p => tot += p[1]);
         return tot;
     }
+
+    quantitàProdotto(prodotto : Prodotto) : number | void
+    {
+        this.listaProdotti.find(p => {
+            if(p[0] === prodotto) return p[1];
+            else return;
+        })
+    }
 }

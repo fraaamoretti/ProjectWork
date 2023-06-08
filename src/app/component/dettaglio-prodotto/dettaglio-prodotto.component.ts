@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Prodotto } from 'src/app/model/prodotto';
+import { Categorie, Prodotto } from 'src/app/model/prodotto';
 import { ProdottiService } from 'src/app/service/prodottiService';
 
 @Component({
