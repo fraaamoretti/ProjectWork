@@ -64,6 +64,13 @@ export class ProdottiService {
         return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
     }
 
+    filtraCateg(categoriaDiRicerca: Categorie): Prodotto[] {
+        console.log(categoriaDiRicerca);
+        return this.magazzino.filter(p => {
+            p.categoria === categoriaDiRicerca
+        })
+    }
+
     getCategorie() : string[] {
         let ar : string[] = [];
         for(let c of Object.keys(Categorie)) {

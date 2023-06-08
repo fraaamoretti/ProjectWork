@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'prodotto/:id', component: DettaglioProdottoComponent }, //parametrico
   {path: 'conferma', component: ConfermaPagamentoComponent},
   {path: 'elenco-prodotti/:stringaDiRicerca', component: ElencoProdottiComponent},
+  {path: 'categoria/:categoriaDiRicerca', component: ElencoProdottiComponent},
   {path: '**', component: NotFoundComponent} //qualsiasi che non sia quelli sopra
 ];
 @NgModule({

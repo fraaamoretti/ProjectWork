@@ -16,6 +16,7 @@ import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferm
 import { RicercaComponent } from './component/ricerca/ricerca.component';
 import { FormsModule } from '@angular/forms';
 import { ElementoCarrelloComponent } from './component/elemento-carrello/elemento-carrello.component';
+import { FiltroCategoriaComponent } from './component/filtro-categoria/filtro-categoria.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ElementoCarrelloComponent } from './component/elemento-carrello/element
     ElencoProdottiComponent,
     ConfermaPagamentoComponent,
     RicercaComponent,
-    ElementoCarrelloComponent
+    ElementoCarrelloComponent,
+    FiltroCategoriaComponent
   ],
   imports: [
     BrowserModule,
