@@ -11,7 +11,12 @@ export class ProdottoComponent {
   @Input()
   prodotto? : Prodotto;
   preferito = false;
-  service : ProdottiService = new ProdottiService();
+  /* service : ProdottiService = new ProdottiService(); */
+
+  constructor(public prodottiService : ProdottiService)
+  {
+
+  }
 
   modificaPreferito()
   {

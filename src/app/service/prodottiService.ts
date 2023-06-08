@@ -6,16 +6,16 @@ import { Carrello } from "../model/carrello";
 export class ProdottiService {
     private magazzino: Prodotto[] = [
         // new Prodotto("La divina commedia", Categorie.Libri, 12, ['divinacommedia.jpg'], 'Commedia sui tre mondi'),
-         new Prodotto("I promessi sposi", Categorie.Libri, 14, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("I promessi idioti", Categorie.Libri, 13, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("I mancati sposi", Categorie.Libri, 20, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("I 3 promessi sposi", Categorie.Libri, 3, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("Volevano sposarsi, ma lui è islamico", Categorie.Libri, 2, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("Come comprare una moglie", Categorie.Libri, 8, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("Gli sposi promessi", Categorie.Libri, 69, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("All' occhio di Dio", Categorie.Libri, 420, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-         new Prodotto("Mi identifico sessualmente come sposa", Categorie.Libri, 33, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi idioti", Categorie.Libri, 13, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I mancati sposi", Categorie.Libri, 20, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("I 3 promessi sposi", Categorie.Libri, 3, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("Volevano sposarsi, ma lui è islamico", Categorie.Libri, 2, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("Come comprare una moglie", Categorie.Libri, 8, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("Gli sposi promessi", Categorie.Libri, 69, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("All' occhio di Dio", Categorie.Libri, 420, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
+        new Prodotto("Mi identifico sessualmente come sposa", Categorie.Libri, 33, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
         // new Prodotto("Il buio oltre la siepe", Categorie.Libri, 33, ['il-buio-oltre-la-siepe.jpg'], 'Romanzo di Harper Lee'),
         // new Prodotto("Peluche Doraemon", Categorie.Giocattoli, 30, ['doraemon.jpg'], 'Pelouche doraemon 18cm'),
         // new Prodotto("Monopoly", Categorie.Giocattoli, 28, ['monopoly.jpg'], 'Monopoly classico'),
@@ -28,23 +28,38 @@ export class ProdottiService {
         // new Prodotto("Mouse Mid Cooler Master", Categorie.Mouse, 120, ['mousemidcoolermaster.jpg'], 'Mouse Gaming'),
         // new Prodotto("Mouse PRO Razer", Categorie.Mouse, 420, ['mouseprorazer.jpg'], 'Mouse Pro Razer')
 
-        
 
-        
+
+
     ]
 
     carrello: Carrello = new Carrello([]);
 
-    get listaProdotti() : Prodotto[]{
+    get listaProdotti(): Prodotto[] {
         return this.magazzino;
     }
 
-    aggiungiAlCarrello(prod: Prodotto): void { 
+    aggiungiAlCarrello(prod: Prodotto): void {/*
         for (let s = 0; s < this.carrello.listaProdotti.length; s++) {
-            if (this.carrello.listaProdotti[s][0] == prod) { this.carrello.listaProdotti[s][1]++;console.log(this.carrello.listaProdotti); return; }
+            if (this.carrello.listaProdotti[s][0] == prod)
+            {
+                this.carrello.listaProdotti[s][1]++;
+                this.carrello.listaProdotti.forEach(p => console.log(p[1]));
+                return; 
+            }
         }
         this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
-        console.log(this.carrello.listaProdotti);
+        this.carrello.listaProdotti.forEach(p => console.log(p[1]));*/
+        console.log(this.carrello.listaProdotti.length);
+        for(let i = 0; i < this.carrello.listaProdotti.length;i++)
+        {
+            if (this.carrello.listaProdotti[i][0] == prod)
+            {
+                this.carrello.listaProdotti[i][1]++;
+                return; 
+            }
+        }
+        this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
     }
 
     rimuoviDalCarrello(prod: Prodotto, azione: boolean): void {
@@ -58,5 +73,9 @@ export class ProdottiService {
                 return;
             }
         }
+    }
+    getAll()
+    {
+        return this.carrello.listaProdotti;
     }
 }
