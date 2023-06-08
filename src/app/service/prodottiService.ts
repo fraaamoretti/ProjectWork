@@ -34,14 +34,18 @@ export class ProdottiService {
         this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
     }
 
-    rimuoviDalCarrello(prod: Prodotto, azione: boolean): void {
-        for (let s = 0; s < this.carrello.listaProdotti.length; s++) {
-            if (this.carrello.listaProdotti[s][0] == prod) {
-                if (azione) { // tasto X
+    rimuoviDalCarrello(prod: Prodotto, rimuovi: boolean): void {
+        for (let s = 0; s < this.carrello.listaProdotti.length; s++)
+        {
+            if (this.carrello.listaProdotti[s][0] == prod)
+            {
+                if (rimuovi) { // tasto X
                     if (this.carrello.listaProdotti[s][0] == prod) { this.carrello.listaProdotti.splice(s, 1); return; } // rimuovo l'elemento
                 }
+
                 // decrementa
                 if (this.carrello.listaProdotti[s][1] > 0) this.carrello.listaProdotti[s][1]--; // controllo che non vada in negativo
+                if(this.carrello.listaProdotti[s][1] == 0) this.carrello.listaProdotti.splice(s, 1); //se 0 rimuovo
                 return;
             }
         }
@@ -68,14 +72,23 @@ export class ProdottiService {
         return ar;
     }
 
-    prodottoQuantity(prodotto : Prodotto) : string | void
+    getProdottoQuantity(prodotto : Prodotto) : number
     {
-        this.carrello.listaProdotti.find(p => {
-            if(p[0] === prodotto)
+        let quantity : number = -1;
+
+        this.carrello.listaProdotti.forEach( 
+            p => 
             {
-                return p[1];
-            }
-            else return;
-        })
+                if(p[0] == prodotto)
+                {
+                    quantity = p[1];
+                } else
+                {
+                    quantity = -1;
+                }
+            } 
+        )
+
+        return quantity;
     }
 }
