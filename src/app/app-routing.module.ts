@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'carrello', component: CarrelloComponent },
   {path: 'about', component: AboutComponent },
   {path: 'prodotto/:id', component: DettaglioProdottoComponent }, //parametrico
-  {path: '', component: ConfermaPagamentoComponent},
+  {path: 'conferma', component: ConfermaPagamentoComponent},
   {path: '**', component: NotFoundComponent} //qualsiasi che non sia quelli sopra
 ];
 @NgModule({

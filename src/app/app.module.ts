@@ -13,6 +13,8 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AboutComponent } from './component/about/about.component';
 import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prodotti.component';
 import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferma-pagamento.component';
+import { RicercaComponent } from './component/ricerca/ricerca.component';
+import { FormsModule } from '@angular/forms';
 import { ElementoCarrelloComponent } from './component/elemento-carrello/elemento-carrello.component';
 
 @NgModule({
@@ -27,11 +29,13 @@ import { ElementoCarrelloComponent } from './component/elemento-carrello/element
     AboutComponent,
     ElencoProdottiComponent,
     ConfermaPagamentoComponent,
+    RicercaComponent,
     ElementoCarrelloComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ProdottiService],
   bootstrap: [AppComponent]
