@@ -1,7 +1,13 @@
 <div class="d-flex">
     <app-prodotto [prodotto]="prodotto"></app-prodotto>
-    <div>
-        <h2>{{prodotto?.titolo}}</h2>
-        <h3>{{prodotto?.autore}}</h3>
-    </div>
+    <ng-container *ngIf="prodotto">
+        <div>
+            <h2>{{prodotto.titolo}}</h2>
+            <h3>By {{prodotto.autore}}</h3>
+            <h4>Categoria: {{prodotto.categoria}}</h4>
+            <h5>{{prodotto.prezzo}} €</h5>
+            <p>{{prodotto.descrizione}}</p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="prodotto == undefined">Nessun libro disponibile</ng-container>
 </div>

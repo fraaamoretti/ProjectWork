@@ -14,7 +14,7 @@ export class ProdottiService {
         new Prodotto(5, "Ecco qui Ambda", "Peppa Pig", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
         new Prodotto(6, "L'amore non voluto", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
         new Prodotto(7, "L'Amore sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
-        new Prodotto(8, "Viaggio su Giove", "Mickey Mouse", Categorie.Science, 27, ["science1.png"], "Un libro di "),
+        new Prodotto(8, "Viaggio su Giove", "Mickey     Mouse", Categorie.Science, 27, ["science1.png"], "Un libro di "),
         new Prodotto(9, "Cosa c'è su Marte", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"], "Un libro di "),
         new Prodotto(10, "L'Atlantide nell'universo", "Scooby Doo", Categorie.Science, 14, ["science3.png"], "Un libro di "),
         new Prodotto(11, "L'università di mio padre", "Jerry Mouse", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
