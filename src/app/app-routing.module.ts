@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent },
   {path: 'prodotto/:id', component: DettaglioProdottoComponent }, //parametrico
   {path: 'conferma', component: ConfermaPagamentoComponent},
+  {path: 'elenco-prodotti/:stringaDiRicerca', component: ElencoProdottiComponent},
   {path: '**', component: NotFoundComponent} //qualsiasi che non sia quelli sopra
 ];
 @NgModule({
