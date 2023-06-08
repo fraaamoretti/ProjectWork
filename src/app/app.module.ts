@@ -13,6 +13,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AboutComponent } from './component/about/about.component';
 import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prodotti.component';
 import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferma-pagamento.component';
+import { ElementoCarrelloComponent } from './component/elemento-carrello/elemento-carrello.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferm
     NotFoundComponent,
     AboutComponent,
     ElencoProdottiComponent,
-    ConfermaPagamentoComponent
+    ConfermaPagamentoComponent,
+    ElementoCarrelloComponent
   ],
   imports: [
     BrowserModule,
