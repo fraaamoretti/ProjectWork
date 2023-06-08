@@ -15,4 +15,8 @@ export class ElencoProdottiComponent {
     {
         this.prodotti = prodService.listaProdotti;
     }
+
+    cerca(valore: string){
+      
+    }
 }

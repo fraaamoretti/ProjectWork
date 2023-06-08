@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Prodotto, Categorie } from 'src/app/model/prodotto';
 
 @Component({
   selector: 'app-banner',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
     title = "Shop-lifter";
-    slogan = "Ti rubiamo il cuore, non i dati"
+    slogan = "Ti rubiamo il cuore, non i dati";
 }
+
+

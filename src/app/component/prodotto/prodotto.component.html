@@ -18,11 +18,11 @@
           <div class="clickable" (click)="dettaglioProdotto()">
 
             <div class="div-card-img">
-              <img class="card-img-top h-100 w-100" [src] = "prodotto.img" [alt]="'foto di ' + prodotto.nome">
+              <img class="card-img-top h-100 w-100" [src] = "prodotto.img" [alt]="'foto di ' + prodotto.titolo">
             </div>
 
             <div class="card-body">
-              <h2 class="card-title">{{prodotto.nome | tronca:14}}</h2>
+              <h2 class="card-title">{{prodotto.titolo | tronca:14}}</h2>
               <h4 class="card-text">{{prodotto.prezzo}}€</h4>
           </div>
           

@@ -5,7 +5,7 @@ export class Prodotto
     path = '../../assets/img/';
     preferito = false;
 
-    constructor(public nome:string, public categoria:Categorie, public prezzo:number, public img:string[], public descrizione?:string)
+    constructor(public titolo:string, public autore:string, public categoria:Categorie, public prezzo:number, public img:string[], public descrizione?:string)
     {
         if(this.descrizione === undefined)
         {
