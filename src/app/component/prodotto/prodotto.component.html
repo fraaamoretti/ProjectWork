@@ -15,7 +15,7 @@
 
 
       <ng-container *ngIf="prodotto; else elseBlock">
-          <div class="clickable" (click)="dettaglioProdotto()">
+          <div class="clickable">
             <a [routerLink]="['/prodotto',prodotto.id]">
             <div class="div-card-img">
               <img class="card-img-top h-100 w-100" [src] = "prodotto.img" [alt]="'foto di ' + prodotto.titolo">
