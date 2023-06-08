@@ -7,18 +7,18 @@ import { RouterTestingHarness } from "@angular/router/testing";
 export class ProdottiService {
     
     private magazzino: Prodotto[] = [
-        new Prodotto(1, "Vita tra i funghi", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
-        new Prodotto(2, "Musica dall'alto", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
-        new Prodotto(3, "La biblioteca", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
-        new Prodotto(4, "Dov'è Ambda", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
-        new Prodotto(5, "Ecco qui Ambda", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
-        new Prodotto(6, "L'amore non voluto", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
-        new Prodotto(7, "Amore sul treno", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
-        new Prodotto(8, "Viaggio su Giove", Categorie.Science, 27, ["science1.png"], "Un libro di "),
-        new Prodotto(9, "Cosa c'è su Marte", Categorie.Science, 16, ["science2.png"], "Un libro di "),
-        new Prodotto(10, "Atlantide nell'universo", Categorie.Science, 14, ["science3.png"], "Un libro di "),
-        new Prodotto(11, "L'università di mio padre", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
-        new Prodotto(12, "Indipendenti dalla natura", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
+        new Prodotto(1, "Vita tra i funghi","a", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
+        new Prodotto(2, "Musica dall'alto", "a", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
+        new Prodotto(3, "La biblioteca", "a", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
+        new Prodotto(4, "Dov'è Ambda", "a", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
+        new Prodotto(5, "Ecco qui Ambda", "a", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
+        new Prodotto(6, "L'amore non voluto", "a", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
+        new Prodotto(7, "Amore sul treno", "a", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
+        new Prodotto(8, "Viaggio su Giove", "a", Categorie.Science, 27, ["science1.png"], "Un libro di "),
+        new Prodotto(9, "Cosa c'è su Marte", "a", Categorie.Science, 16, ["science2.png"], "Un libro di "),
+        new Prodotto(10, "Atlantide nell'universo", "a", Categorie.Science, 14, ["science3.png"], "Un libro di "),
+        new Prodotto(11, "L'università di mio padre", "a", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
+        new Prodotto(12, "Indipendenti dalla natura", "a", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
     ]
 
     carrello: Carrello = new Carrello([]);
@@ -72,5 +72,7 @@ export class ProdottiService {
             if(p.id == wanted_id) return p;
             else return;
         })
+    find(stringaDiRicerca: string) : Prodotto[] {
+        return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
     }
 }
