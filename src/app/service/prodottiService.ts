@@ -5,9 +5,9 @@ import { RouterTestingHarness } from "@angular/router/testing";
 
 @Injectable()
 export class ProdottiService {
-    
+
     private magazzino: Prodotto[] = [
-        new Prodotto(1, "Vita tra i funghi","a", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
+        new Prodotto(1, "Vita tra i funghi", "a", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
         new Prodotto(2, "Musica dall'alto", "a", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
         new Prodotto(3, "La biblioteca", "a", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
         new Prodotto(4, "Dov'è Ambda", "a", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
@@ -39,12 +39,10 @@ export class ProdottiService {
         this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
         this.carrello.listaProdotti.forEach(p => console.log(p[1]));*/
         console.log(this.carrello.listaProdotti.length);
-        for(let i = 0; i < this.carrello.listaProdotti.length;i++)
-        {
-            if (this.carrello.listaProdotti[i][0] == prod)
-            {
+        for (let i = 0; i < this.carrello.listaProdotti.length; i++) {
+            if (this.carrello.listaProdotti[i][0] == prod) {
                 this.carrello.listaProdotti[i][1]++;
-                return; 
+                return;
             }
         }
         this.carrello.listaProdotti.push([prod, 1]); // in caso non ci sia
@@ -62,17 +60,17 @@ export class ProdottiService {
             }
         }
     }
-    getAll()
-    {
+    getAll() {
         return this.carrello.listaProdotti;
     }
-    getOne(wanted_id: number) : Prodotto | any
-    {
+    getOne(wanted_id: number): Prodotto | any {
         this.magazzino.forEach(p => {
-            if(p.id == wanted_id) return p;
+            if (p.id == wanted_id) return p;
             else return;
         })
-    find(stringaDiRicerca: string) : Prodotto[] {
+
+    }
+    find(stringaDiRicerca: string): Prodotto[] {
         return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
     }
 }
