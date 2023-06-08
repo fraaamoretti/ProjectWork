@@ -13,8 +13,6 @@ export class CarrelloComponent {
   carrello: Carrello = new Carrello([]);
   constructor(private prodottiService : ProdottiService)
   {
-    // this.carrello.listaProdotti.push([new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'), 3]);
-    // this.carrello.listaProdotti.push([new Prodotto("I promessi morti", Categorie.Libri, 4, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'), 1]);
     this.carrello.listaProdotti = this.prodottiService.getAll();
   }
 

@@ -15,6 +15,7 @@ import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prod
 import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferma-pagamento.component';
 import { RicercaComponent } from './component/ricerca/ricerca.component';
 import { FormsModule } from '@angular/forms';
+import { ElementoCarrelloComponent } from './component/elemento-carrello/elemento-carrello.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ElencoProdottiComponent,
     ConfermaPagamentoComponent,
-    RicercaComponent
+    RicercaComponent,
+    ElementoCarrelloComponent
   ],
   imports: [
     BrowserModule,

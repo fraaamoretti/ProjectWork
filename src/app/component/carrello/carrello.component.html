@@ -1,23 +1,27 @@
 <div class="container d-flex flex-row">
-    <div class="w-100 carrello border rounded m-r p-3">
+    <div class="w-100 carrello border rounded m-r p-3 d-flex flex-column">
         <div class="scrittaAlta d-flex flex-row justify-content-between align-items-center border-bottom">
             <h1>Carrello</h1>
             <h5 class="align-self-end">prezzo</h5>
         </div>
 
         <ng-container *ngFor="let p of carrello.listaProdotti">
-           <!-- <app-elemento-carrello [prodotto] = "p"></app-elemento-carrello> --> 
+           <app-elemento-carrello [prodotto] = "p[0]"></app-elemento-carrello> 
         </ng-container>
 
         <ng-container *ngIf = "carrello.listaProdotti.length == 0">
             <!-- <app-carrello-vuoto></app-carrello-vuoto> -->
         </ng-container>
 
+        <div class="totProdotti d-flex flex-row justify-content-end mt-3">
+            <h5 class="align-self-end">N. prodotti: {{carrello.numeroProdotti}}</h5>
+        </div>
+
     </div>
 
     <div class="totalPrice m-l border rounded p-3 d-flex flex-column">
         <h1>Totale provvisorio:</h1>
-        <h3>{{carrello.prezzoTotale}}€</h3>
+        <h3>{{calcolaTotale()}}€</h3>
         <button class="btn btn-primary align-self-center" [routerLink]="">Compra subito</button>
             
     </div>
