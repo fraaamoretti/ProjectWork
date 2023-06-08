@@ -6,32 +6,18 @@ import { Carrello } from "../model/carrello";
 export class ProdottiService {
     
     private magazzino: Prodotto[] = [
-        // new Prodotto("La divina commedia", Categorie.Libri, 12, ['divinacommedia.jpg'], 'Commedia sui tre mondi'),
-        new Prodotto("I promessi sposi", Categorie.Libri, 14, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I promessi idioti", Categorie.Libri, 13, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I mancati sposi", Categorie.Libri, 20, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I promessi morti", Categorie.Libri, 45, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("I 3 promessi sposi", Categorie.Libri, 3, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("Volevano sposarsi, ma lui è islamico", Categorie.Libri, 2, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("Come comprare una moglie", Categorie.Libri, 8, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("Gli sposi promessi", Categorie.Libri, 69, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("All' occhio di Dio", Categorie.Libri, 420, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        new Prodotto("Mi identifico sessualmente come sposa", Categorie.Libri, 33, ['promessisposi.jpg'], 'Il romanzo più famoso e più letto tra quelli scritti in lingua italiana'),
-        // new Prodotto("Il buio oltre la siepe", Categorie.Libri, 33, ['il-buio-oltre-la-siepe.jpg'], 'Romanzo di Harper Lee'),
-        // new Prodotto("Peluche Doraemon", Categorie.Giocattoli, 30, ['doraemon.jpg'], 'Pelouche doraemon 18cm'),
-        // new Prodotto("Monopoly", Categorie.Giocattoli, 28, ['monopoly.jpg'], 'Monopoly classico'),
-        // new Prodotto("Majhong", Categorie.Giocattoli, 11, ['majhong.jpg'], 'Tavola da gioco con set di majhong'),
-        // new Prodotto("Uno - la sfida", Categorie.Giocattoli, 9, ['uno.jpg'], 'Carte da gioco Uno'),
-        // new Prodotto("Action Figure - Zoro", Categorie.Giocattoli, 16, ['zoro.jpg'], 'Onepiece zoro'),
-        // new Prodotto("Mouse Logitech Base", Categorie.Mouse, 12, ['mousebase.jpg'], 'Mouse base ufficio'),
-        // new Prodotto("Mouse Logitech Avanzato", Categorie.Mouse, 40, ['mouseavanzato.jpg'], 'Mouse Superlight'),
-        // new Prodotto("Mouse ESL Razer", Categorie.Mouse, 80, ['mouseeslrazer.jpg'], 'Mouse Razer Edizione Speciale ESL'),
-        // new Prodotto("Mouse Mid Cooler Master", Categorie.Mouse, 120, ['mousemidcoolermaster.jpg'], 'Mouse Gaming'),
-        // new Prodotto("Mouse PRO Razer", Categorie.Mouse, 420, ['mouseprorazer.jpg'], 'Mouse Pro Razer')
-
-
-
-
+        new Prodotto("Vita tra i funghi", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
+        new Prodotto("Musica dall'alto", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
+        new Prodotto("La biblioteca", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
+        new Prodotto("Dov'è Ambda", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
+        new Prodotto("Ecco qui Ambda", Categorie.Giallo, 27, ["giallo3.png"], "Un libro di "),
+        new Prodotto("L'amore non voluto", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
+        new Prodotto("Amore sul treno", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
+        new Prodotto("Viaggio su Giove", Categorie.Science, 27, ["science1.png"], "Un libro di "),
+        new Prodotto("Cosa c'è su Marte", Categorie.Science, 16, ["science2.png"], "Un libro di "),
+        new Prodotto("Atlantide nell'universo", Categorie.Science, 14, ["science3.png"], "Un libro di "),
+        new Prodotto("L'università di mio padre", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
+        new Prodotto("Indipendenti dalla natura", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
     ]
 
     carrello: Carrello = new Carrello([]);

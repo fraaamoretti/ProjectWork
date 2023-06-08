@@ -1,4 +1,4 @@
-export enum Categorie{Mouse, Casa, Libri, Giocattoli}
+export enum Categorie{Fantasy, Giallo, Romanzo, Science, SelfDevelopment}
 
 export class Prodotto
 {
