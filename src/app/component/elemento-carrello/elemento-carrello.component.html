@@ -1,5 +1,27 @@
-<div class="d-flex flex-row align-items-center p-2">
+<ng-container *ngIf="prodotto">
+
+    <div class="d-flex flex-row align-items-center justify-content-between-2 border-bottom">
+
+        <div class="d-flex flex-row align-items-center">
+            <div class="scale-02 m-3">
+                <img [src] = "prodotto.img" class="w-100">
+            </div>
     
-    <img [src]="prodotto.img">
+            <div class="d-flex flex-column align-items-start">
+                <h1>Vivere tra i funghi</h1>
+                <h5>Liu Haojie</h5>
+                <!-- <h1>{{prodotto.titolo}}</h1> -->
+                <!-- <h5>{{prodotto.autore}}</h5> -->
+            </div>
     
-</div>
+            <div>
+                + 1 -
+            </div>
+        </div>
+
+        <p class="align-self-start m-2">{{prodotto.prezzo}}€</p>
+
+    </div>
+    
+
+</ng-container>

@@ -11,24 +11,17 @@ import { ProdottiService } from 'src/app/service/prodottiService';
 export class CarrelloComponent {
 
   carrello: Carrello = new Carrello([]);
+
+
   constructor(private prodottiService : ProdottiService)
   {
     this.carrello.listaProdotti = this.prodottiService.getAll();
   }
-
   
-  
-
   calcolaTotale() : number
   {
     this.carrello.prezzoTotale = 0;
     this.carrello.listaProdotti.forEach( p => this.carrello.prezzoTotale += (p[1]*p[0].prezzo));//fixato
     return this.carrello.prezzoTotale;
-  }
-
-  contaProdotti() : number
-  {
-    // this.carrello.listaProdotti[0].length = 0;
-    return this.carrello.listaProdotti.length;
   }
 }

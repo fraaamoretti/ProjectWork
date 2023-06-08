@@ -9,10 +9,9 @@ import { ProdottiService } from 'src/app/service/prodottiService';
 })
 export class ElementoCarrelloComponent {
   @Input()
-  prodotto : Prodotto;
+  prodotto? : Prodotto;
 
 
-  constructor(p:Prodotto,private prodottiService: ProdottiService){
-    this.prodotto = p;
+  constructor(private prodottiService: ProdottiService){
   }
 }
