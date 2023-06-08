@@ -13,9 +13,4 @@ export class RicercaComponent{
     cerca() : void {
       this.cercaEvent.emit(this.stringaDiRicerca);
     }
-    
-    pulisci() : void {
-      this.stringaDiRicerca = "";
-      this.cerca();
-    }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Prodotto } from 'src/app/model/prodotto';
 import { ProdottiService } from 'src/app/service/prodottiService';
 
@@ -11,12 +12,19 @@ export class ElencoProdottiComponent {
 
     prodotti : Prodotto[];
 
-    constructor(private prodService : ProdottiService)
+    constructor(private prodService : ProdottiService, public router : Router, public activatedRoute : ActivatedRoute)
     {
-        this.prodotti = prodService.magazzino;
+
+      if(this.activatedRoute.snapshot.params['stringaDiRicerca'] == undefined){
+        this.prodotti = this.prodService.magazzino;
+      }else{
+        this.prodotti = this.prodService.find(this.activatedRoute.snapshot.params['stringaDiRicerca']);
+      }
+        
+        
+
+
     }
 
-    cerca(valore: string){
-      
-    }
+    
 }
