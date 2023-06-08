@@ -24,4 +24,9 @@ export class CarrelloComponent {
     this.carrello.listaProdotti.forEach( p => this.carrello.prezzoTotale += (p[1]*p[0].prezzo));//fixato
     return this.carrello.prezzoTotale;
   }
+  elimina() : void{
+    this.carrello.listaProdotti.forEach( p => {
+      this.prodottiService.rimuoviDalCarrello(p[0],false);
+    });
+}
 }

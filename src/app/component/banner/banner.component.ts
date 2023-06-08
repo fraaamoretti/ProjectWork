@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProdottiService } from 'src/app/service/prodottiService';
 
 @Component({
@@ -10,7 +11,14 @@ export class BannerComponent {
     title = "Shop-lifter";
     slogan = "Ti rubiamo il cuore, non i dati";
 
-    constructor(public prodottiService : ProdottiService) {}
+    constructor(public prodottiService : ProdottiService, public router : Router) {}
+
+    cerca(valore: string){
+      this.router.navigate(['elenco-prodotti',valore]);
+      //this.prodottiService.find(valore); 
+    }
+
+
 }
 
 
