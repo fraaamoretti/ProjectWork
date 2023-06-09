@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { ElementoCarrelloComponent } from './component/elemento-carrello/elemento-carrello.component';
 import { FiltroCategoriaComponent } from './component/filtro-categoria/filtro-categoria.component';
 import { ElencoProdottiCategoriaComponent } from './component/elenco-prodotti-categoria/elenco-prodotti-categoria.component';
+import { CarrelloVuotoComponent } from './component/carrello-vuoto/carrello-vuoto.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ElencoProdottiCategoriaComponent } from './component/elenco-prodotti-ca
     RicercaComponent,
     ElementoCarrelloComponent,
     FiltroCategoriaComponent,
-    ElencoProdottiCategoriaComponent
+    ElencoProdottiCategoriaComponent,
+    CarrelloVuotoComponent
   ],
   imports: [
     BrowserModule,
