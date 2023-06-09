@@ -7,18 +7,18 @@ import { RouterTestingHarness } from "@angular/router/testing";
 export class ProdottiService {
 
     magazzino: Prodotto[] = [
-        new Prodotto(1, "Vita tra i funghi", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"]),
-        new Prodotto(2, "Musica dall'alto", "Peter Parker", Categorie.Fantasy, 24, ["fantasy2.png"]),
-        new Prodotto(3, "La biblioteca senza libri", "Zio Paperone", Categorie.Giallo, 11, ["giallo1.png"]),
-        new Prodotto(4, "Dov'è Ambda", "Peppa Pig", Categorie.Giallo, 22, ["giallo2.png"]),
-        new Prodotto(5, "Ecco qui Ambda", "Peppa Pig", Categorie.Giallo, 27, ["giallo3.png"], `Il famoso sequel del best seller "Dov'è Ambda", di Peppa Pig.`),
-        new Prodotto(6, "Ahedy: la ragazza innamorata", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"]),
+        new Prodotto(1, "The Shroom Island", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"]),
+        new Prodotto(2, "Musica dall'alto", "Pietro Parcheggiatore", Categorie.Fantasy, 24, ["fantasy2.png"]),
+        new Prodotto(3, "La biblioteca senza libri", "Jerry Mouse", Categorie.Giallo, 11, ["giallo1.png"]),
+        new Prodotto(4, "Dov'è Ambda", "Genoveffa e' Maialj", Categorie.Giallo, 22, ["giallo2.png"]),
+        new Prodotto(5, "Ecco qui Ambda", "Genoveffa e' Maialj", Categorie.Giallo, 27, ["giallo3.png"], `Il famoso sequel del best seller "Dov'è Ambda", di Peppa Pig.`),
+        new Prodotto(6, "Love lasts", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"]),
         new Prodotto(7, "Incontriamoci sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"]),
-        new Prodotto(8, "Viaggio su Giove", "Mickey     Mouse", Categorie.Science, 27, ["science1.png"]),
-        new Prodotto(9, "Cosa c'è su Marte", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"]),
+        new Prodotto(8, "Viaggio su Giove", "Michele o' Topo", Categorie.Science, 27, ["science1.png"]),
+        new Prodotto(9, "Mars #44a2, la missione", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"]),
         new Prodotto(10, "L'Atlantide nell'universo", "Scooby Doo", Categorie.Science, 14, ["science3.png"]),
-        new Prodotto(11, "L'università di mio padre", "Jerry Mouse", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"]),
-        new Prodotto(12, "Indipendenti dalla natura", "Winnie the Pooh", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"])
+        new Prodotto(11, "Arricchisci la mente", "Zio Paperone", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"]),
+        new Prodotto(12, "Indipendenti dalla natura - una guida alla meditazione", "Marco Aureola", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"])
     ]
 
     carrello: Carrello = new Carrello([]);

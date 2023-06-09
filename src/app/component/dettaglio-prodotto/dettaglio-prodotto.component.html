@@ -1,22 +1,24 @@
-<div class="d-flex border rounded">
+<div class="d-flex flex-column">
+    <span class="d-flex border rounded align-self-center">
     
-    <ng-container *ngIf="prodotto">
-        <app-prodotto [prodotto]="prodotto"></app-prodotto>
-
-        <div>
-            <h1 class="titolo">{{prodotto.titolo}}</h1>
-            <h3 class="text-secondary text-18">{{prodotto.autore}}</h3>
-            <h4 class="autore text-18">Categoria: {{nomeCategoria}}</h4>
-            <p>{{prodotto.prezzo}} €</p>
-            <p>{{prodotto.descrizione}}</p>
-
-            <button class="btn-green w-100" (click)="prodottiService.aggiungiAlCarrello(prodotto)">Aggiungi al carrello</button>
-        </div>
-
-    </ng-container>
-
-    <ng-container *ngIf="prodotto == undefined">
-        <app-not-found></app-not-found>
-    </ng-container>
-
+        <ng-container *ngIf="prodotto">
+            <app-prodotto [prodotto]="prodotto"></app-prodotto>
+    
+            <div class="m-5">
+                <h1 class="titolo">{{prodotto.titolo}}</h1>
+                <h3 class="text-secondary text-18">{{prodotto.autore}}</h3>
+                <h4 class="autore text-18">Categoria: {{nomeCategoria}}</h4>
+                <p>{{prodotto.prezzo}} €</p>
+                <p>{{prodotto.descrizione}}</p>
+    
+                <button class="btn-green w-100" (click)="prodottiService.aggiungiAlCarrello(prodotto)">Aggiungi al carrello</button>
+            </div>
+    
+        </ng-container>
+    
+        <ng-container *ngIf="prodotto == undefined">
+            <app-not-found></app-not-found>
+        </ng-container>
+    
+    </span>
 </div>
