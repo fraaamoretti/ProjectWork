@@ -64,17 +64,26 @@ export class ProdottiService {
         return this.magazzino.filter(l => l.titolo.toLowerCase().includes(stringaDiRicerca.toLowerCase()) || l.autore.toLowerCase().includes(stringaDiRicerca.toLowerCase()))
     }
 
+    tutteLeCategorie = 'Tutte le categorie';
+    stPreferiti = 'Preferiti';
+
     filtraCateg(categoriaDiRicerca: string): Prodotto[] {
         let ret : Prodotto[] = [];
-        if(categoriaDiRicerca == 'Tutte le categorie'){
+        if(categoriaDiRicerca == this.tutteLeCategorie){
             return this.magazzino;
+        } else if (categoriaDiRicerca == this.stPreferiti){
+            for(let p of this.magazzino){
+                if(p.preferito == true){
+                    ret.push(p);
+                }
+            }
+            return ret;
         }
         for(let p of this.magazzino){
             if(Categorie[p.categoria] == categoriaDiRicerca){
                 ret.push(p);
             }
         }
-
         return ret;
 
         //return this.magazzino.filter(p => {Categorie[p.categoria] == categoriaDiRicerca})

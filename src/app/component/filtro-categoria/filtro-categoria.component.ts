@@ -7,11 +7,12 @@ import { ProdottiService } from 'src/app/service/prodottiService';
   styleUrls: ['./filtro-categoria.component.css']
 })
 export class FiltroCategoriaComponent {
-  categoriaDiRicerca : string = "Tutte le categorie";
+  categoriaDiRicerca = this.prodottiService.tutteLeCategorie;
   @Output() cercaEvent = new EventEmitter();
 
-
   constructor(public prodottiService:ProdottiService){}
+  
+  
 
 
   cercaCategoria() : void {
