@@ -9,7 +9,7 @@ export class Prodotto
     {
         if(this.descrizione === undefined)
         {
-            this.descrizione = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum possimus, totam magni assumenda incidunt dolorem similique itaque sint beatae, inventore suscipit non excepturi esse eligendi rem nulla provident. Dignissimos, ipsa."
+            this.descrizione = ` "${this.titolo}", un libro di ${this.autore}.`;
         }
 
         for(let i = 0; i < img.length; i++)
