@@ -1,0 +1,8 @@
+app-prodotto{
+    transition: transform 0.2s ease-out;
+}
+
+app-prodotto:hover{
+    transform: scale(1.05);
+}
+

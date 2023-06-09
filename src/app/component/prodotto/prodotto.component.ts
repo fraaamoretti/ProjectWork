@@ -22,9 +22,4 @@ export class ProdottoComponent {
   {
     if(this.prodotto) this.prodotto.preferito = !this.prodotto.preferito;
   }
-
-  dettaglioProdotto()
-  {
-    //TODO
-  }
 }
