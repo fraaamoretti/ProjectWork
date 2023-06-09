@@ -11,3 +11,8 @@ a:hover{
     border: none;
     border-radius: 20% 0 0 20%;
 }
+
+.testo{
+    font-size: 14;
+    color: white;
+}
