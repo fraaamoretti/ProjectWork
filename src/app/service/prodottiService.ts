@@ -65,10 +65,18 @@ export class ProdottiService {
     }
 
     filtraCateg(categoriaDiRicerca: string): Prodotto[] {
-        console.log(categoriaDiRicerca);
-        return this.magazzino.filter(p => {
-            Categorie[p.categoria] === categoriaDiRicerca;
-        })
+        console.log(categoriaDiRicerca + '//fino a qui tutto ok');
+        let ret : Prodotto[] = [];
+        for(let p of this.magazzino){
+            console.log(Categorie[p.categoria]);
+            if(Categorie[p.categoria] == categoriaDiRicerca){
+                ret.push(p);
+            }
+        }
+
+        return ret;
+
+        //return this.magazzino.filter(p => {Categorie[p.categoria] == categoriaDiRicerca})
     }
 
     getCategorie() : string[] { //solo visivo
