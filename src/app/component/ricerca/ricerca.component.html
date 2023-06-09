@@ -1,12 +1,7 @@
 <form class="input-group">
     <div class="form-outline d-flex flex-row">
 
-        <select type="button" class="btn bgc-light-green">
-            <option selected disabled>Categorie</option>
-                <ng-container *ngFor="let c of prodottiService.getCategorie()">
-                    <option >{{c}}</option>
-                </ng-container>
-        </select>
+        
 
         <input type="search" id="form1" name="input" class="form-control w-100" [(ngModel)]="stringaDiRicerca" />
         <button type="button" class="bgc-light-green" (click)="cerca()">Cerca</button>

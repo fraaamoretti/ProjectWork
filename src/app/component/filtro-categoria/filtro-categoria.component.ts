@@ -12,4 +12,9 @@ export class FiltroCategoriaComponent {
 
 
   constructor(public prodottiService:ProdottiService){}
+
+
+  cercaCategoria() : void {
+    this.cercaEvent.emit(this.categoriaDiRicerca);
+  }
 }

@@ -13,12 +13,17 @@ export class BannerComponent {
 
     constructor(public prodottiService : ProdottiService, public router : Router) {}
 
+    cercaCategoria(valore: string){
+      this.router.navigate(['categoria',valore]);
+      //this.prodottiService.find(valore); 
+    }
+
     cerca(valore: string){
       this.router.navigate(['elenco-prodotti',valore]);
       //this.prodottiService.find(valore); 
     }
 
-
+  
 }
 
 

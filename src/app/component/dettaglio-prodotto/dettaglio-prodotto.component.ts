@@ -15,6 +15,7 @@ export class DettaglioProdottoComponent {
 
   constructor(private routeService: ActivatedRoute, public prodottiService: ProdottiService)
   {
+<<<<<<< HEAD
     this.id = + this.routeService.snapshot.params['id'];
     if(!isNaN(this.id))
     {
@@ -24,5 +25,11 @@ export class DettaglioProdottoComponent {
       this.nomeCategoria = "";
     }
     
+=======
+    this.routeService.params.subscribe( p => {
+      this.id = +p ['id'];
+      if(!isNaN(this.id)) this.prodotto = this.prodottiService.getOne(this.id);
+    })
+>>>>>>> ef68a68e6d5a6a81629b9ee1099ff5f57061d246
   }
 }

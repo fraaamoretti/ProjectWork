@@ -18,9 +18,8 @@
 
 
             <div class="d-flex flex-row flex-wrap">
-                
+                <app-filtro-categoria class="align-self-center" (cercaEvent)="cercaCategoria($event)"></app-filtro-categoria>
                 <app-ricerca class="align-self-center" (cercaEvent)="cerca($event)"></app-ricerca>
-
             </div>
 
 
@@ -32,7 +31,7 @@
         <div class="container h-100">
             <div class="d-flex flex-row justify-content-between h-100">
                 <div class="align-self-center">
-                    <a [routerLink]="['']" class="p-2 txt-white">Home </a>
+                    <a [routerLink]="['']" class="p-2 txt-white">Home</a>
                     <a [routerLink]="['/about']" class="p-2 txt-white">Chi siamo</a>
                 </div>
 

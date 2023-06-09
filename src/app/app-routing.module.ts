@@ -6,6 +6,7 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AboutComponent } from './component/about/about.component';
 import { ElencoProdottiComponent } from './component/elenco-prodotti/elenco-prodotti.component';
 import {ConfermaPagamentoComponent} from './component/conferma-pagamento/conferma-pagamento.component';
+import { ElencoProdottiCategoriaComponent } from './component/elenco-prodotti-categoria/elenco-prodotti-categoria.component';
 
 const routes: Routes = [
   {path: '', component: ElencoProdottiComponent },
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path: 'prodotto/:id', component: DettaglioProdottoComponent }, //parametrico
   {path: 'conferma', component: ConfermaPagamentoComponent},
   {path: 'elenco-prodotti/:stringaDiRicerca', component: ElencoProdottiComponent},
-  {path: 'categoria/:categoriaDiRicerca', component: ElencoProdottiComponent},
+  {path: 'categoria/:categoriaDiRicerca', component: ElencoProdottiCategoriaComponent},
   {path: '**', component: NotFoundComponent} //qualsiasi che non sia quelli sopra
 ];
 @NgModule({

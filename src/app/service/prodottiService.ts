@@ -61,17 +61,26 @@ export class ProdottiService {
     }
 
     find(stringaDiRicerca: string): Prodotto[] {
-        return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
+        return this.magazzino.filter(l => l.titolo.toLowerCase().includes(stringaDiRicerca.toLowerCase()) || l.autore.toLowerCase().includes(stringaDiRicerca.toLowerCase()))
     }
 
-    filtraCateg(categoriaDiRicerca: Categorie): Prodotto[] {
-        console.log(categoriaDiRicerca);
-        return this.magazzino.filter(p => {
-            p.categoria === categoriaDiRicerca
-        })
+    filtraCateg(categoriaDiRicerca: string): Prodotto[] {
+        let ret : Prodotto[] = [];
+        if(categoriaDiRicerca == 'Categorie'){
+            return this.magazzino;
+        }
+        for(let p of this.magazzino){
+            if(Categorie[p.categoria] == categoriaDiRicerca){
+                ret.push(p);
+            }
+        }
+
+        return ret;
+
+        //return this.magazzino.filter(p => {Categorie[p.categoria] == categoriaDiRicerca})
     }
 
-    getCategorie() : string[] {
+    getCategorie() : string[] { //solo visivo
         let ar : string[] = [];
         for(let c of Object.keys(Categorie)) {
             if(c.length > 3){  ar.push(c) }
