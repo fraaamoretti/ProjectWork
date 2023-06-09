@@ -61,7 +61,7 @@ export class ProdottiService {
     }
 
     find(stringaDiRicerca: string): Prodotto[] {
-        return this.magazzino.filter(l => l.titolo.includes(stringaDiRicerca) || l.autore.includes(stringaDiRicerca))
+        return this.magazzino.filter(l => l.titolo.toLowerCase().includes(stringaDiRicerca.toLowerCase()) || l.autore.toLowerCase().includes(stringaDiRicerca.toLowerCase()))
     }
 
     filtraCateg(categoriaDiRicerca: Categorie): Prodotto[] {

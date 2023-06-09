@@ -10,16 +10,19 @@ import { ProdottiService } from 'src/app/service/prodottiService';
 })
 export class ElencoProdottiComponent {
 
-    prodotti : Prodotto[];
+    prodotti : Prodotto[] = [];
 
     constructor(private prodService : ProdottiService, public router : Router, public activatedRoute : ActivatedRoute)
     {
+      activatedRoute.params.subscribe( p => {
+        if(p['stringaDiRicerca'] == undefined){
+          this.prodotti = this.prodService.magazzino;
+        }else{
+          this.prodotti = this.prodService.find(p['stringaDiRicerca']);
+        }
+      })
 
-      if(this.activatedRoute.snapshot.params['stringaDiRicerca'] == undefined){
-        this.prodotti = this.prodService.magazzino;
-      }else{
-        this.prodotti = this.prodService.find(this.activatedRoute.snapshot.params['stringaDiRicerca']);
-      }
+      
         
         
 
