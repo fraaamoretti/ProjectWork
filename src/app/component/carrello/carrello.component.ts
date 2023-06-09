@@ -25,8 +25,7 @@ export class CarrelloComponent {
     return this.carrello.prezzoTotale;
   }
   elimina() : void{
-    this.carrello.listaProdotti.forEach( p => {
-      this.prodottiService.rimuoviDalCarrello(p[0],false);
-    });
-}
+
+    this.prodottiService.carrello.listaProdotti.splice(0);
+  }
 }

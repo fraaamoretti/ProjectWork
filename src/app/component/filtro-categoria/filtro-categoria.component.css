@@ -1,4 +1,11 @@
 option {
     visibility: visible;
+    background-color: #87A878;
     color: white;
+}
+
+.btn-categorie{
+    background-color : #87A878;
+    border: none;
+    border-radius: 20% 0 0 20%;
 }
