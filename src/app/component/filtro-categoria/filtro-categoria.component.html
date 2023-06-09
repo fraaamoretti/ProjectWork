@@ -1,8 +1,9 @@
 <select type="button" class="form-select btn-categorie txt-black" [(ngModel)]="categoriaDiRicerca" (ngModelChange)="cercaCategoria()">
-    <option selected class="option">Tutte le categorie</option>
+    <option selected class="option">{{prodottiService.tutteLeCategorie}}</option>
         <ng-container *ngFor="let c of prodottiService.getCategorie()">
             <option class="option">{{c}}</option>
         </ng-container>
+    <option>{{prodottiService.stPreferiti}}</option>
 </select>
 
 <!--  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" -->

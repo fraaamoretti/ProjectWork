@@ -14,7 +14,7 @@ option {
 }
 
 .btn-categorie:hover{
-    
+    color: white;
     background-color: #54644D;
     color: #F5F5F5;
 }
