@@ -10,13 +10,19 @@ import { ProdottiService } from 'src/app/service/prodottiService';
 })
 export class DettaglioProdottoComponent {
   id: number = 0;
-  prodotto?: Prodotto;
-  
-  constructor(private routeService: ActivatedRoute, private prodottiService: ProdottiService)
+  prodotto ?: Prodotto;
+  nomeCategoria : string;
+
+  constructor(private routeService: ActivatedRoute, public prodottiService: ProdottiService)
   {
-    this.routeService.params.subscribe( p => {
-      this.id = +p ['id'];
-      if(!isNaN(this.id)) this.prodotto = this.prodottiService.getOne(this.id);
-    })
+    this.id = + this.routeService.snapshot.params['id'];
+    if(!isNaN(this.id))
+    {
+      this.prodotto = this.prodottiService.getOne(this.id);
+      this.nomeCategoria = Categorie[(this.prodotto != undefined ? this.prodotto.categoria : 0)];
+    } else{
+      this.nomeCategoria = "";
+    }
+    
   }
 }

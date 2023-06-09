@@ -7,18 +7,18 @@ import { RouterTestingHarness } from "@angular/router/testing";
 export class ProdottiService {
 
     magazzino: Prodotto[] = [
-        new Prodotto(1, "Vita tra i funghi", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"], "Un libro di "),
-        new Prodotto(2, "Musica dall'alto", "Peter Parker", Categorie.Fantasy, 24, ["fantasy2.png"], "Un libro di "),
-        new Prodotto(3, "La biblioteca", "Zio Paperone", Categorie.Giallo, 11, ["giallo1.png"], "Un libro di "),
-        new Prodotto(4, "Dov'è Ambda", "Peppa Pig", Categorie.Giallo, 22, ["giallo2.png"], "Un libro di "),
-        new Prodotto(5, "Ecco qui Ambda", "Peppa Pig", Categorie.Giallo, 27, ["giallo3.png"], `Il continuo di "Dov'è Ambda" di `),
-        new Prodotto(6, "L'amore non voluto", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"], "Un libro di "),
-        new Prodotto(7, "L'Amore sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"], "Un libro di "),
-        new Prodotto(8, "Viaggio su Giove", "Mickey     Mouse", Categorie.Science, 27, ["science1.png"], "Un libro di "),
-        new Prodotto(9, "Cosa c'è su Marte", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"], "Un libro di "),
-        new Prodotto(10, "L'Atlantide nell'universo", "Scooby Doo", Categorie.Science, 14, ["science3.png"], "Un libro di "),
-        new Prodotto(11, "L'università di mio padre", "Jerry Mouse", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"], "Un libro di "),
-        new Prodotto(12, "Indipendenti dalla natura", "Winnie the Pooh", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"], "Un libro di ")
+        new Prodotto(1, "Vita tra i funghi", "SpongeBob Squarepants", Categorie.Fantasy, 31, ["fantasy1.png"]),
+        new Prodotto(2, "Musica dall'alto", "Peter Parker", Categorie.Fantasy, 24, ["fantasy2.png"]),
+        new Prodotto(3, "La biblioteca", "Zio Paperone", Categorie.Giallo, 11, ["giallo1.png"]),
+        new Prodotto(4, "Dov'è Ambda", "Peppa Pig", Categorie.Giallo, 22, ["giallo2.png"]),
+        new Prodotto(5, "Ecco qui Ambda", "Peppa Pig", Categorie.Giallo, 27, ["giallo3.png"], `Il famoso sequel del best seller "Dov'è Ambda", di Peppa Pig.`),
+        new Prodotto(6, "L'amore non voluto", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"]),
+        new Prodotto(7, "L'Amore sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"]),
+        new Prodotto(8, "Viaggio su Giove", "Mickey     Mouse", Categorie.Science, 27, ["science1.png"]),
+        new Prodotto(9, "Cosa c'è su Marte", "Sherlock Holmes", Categorie.Science, 16, ["science2.png"]),
+        new Prodotto(10, "L'Atlantide nell'universo", "Scooby Doo", Categorie.Science, 14, ["science3.png"]),
+        new Prodotto(11, "L'università di mio padre", "Jerry Mouse", Categorie.SelfDevelopment, 32, ["selfdevelopment1.png"]),
+        new Prodotto(12, "Indipendenti dalla natura", "Winnie the Pooh", Categorie.SelfDevelopment, 19, ["selfdevelopment2.png"])
     ]
 
     carrello: Carrello = new Carrello([]);
@@ -65,10 +65,19 @@ export class ProdottiService {
     }
 
     filtraCateg(categoriaDiRicerca: string): Prodotto[] {
-        //console.log(categoriaDiRicerca);
-        return this.magazzino.filter(p => {
-            'a' === 'a';
-        })
+        let ret : Prodotto[] = [];
+        if(categoriaDiRicerca == 'Categorie'){
+            return this.magazzino;
+        }
+        for(let p of this.magazzino){
+            if(Categorie[p.categoria] == categoriaDiRicerca){
+                ret.push(p);
+            }
+        }
+
+        return ret;
+
+        //return this.magazzino.filter(p => {Categorie[p.categoria] == categoriaDiRicerca})
     }
 
     getCategorie() : string[] { //solo visivo
@@ -81,21 +90,27 @@ export class ProdottiService {
 
     getProdottoQuantity(prodotto : Prodotto) : number
     {
-        let quantity : number = -1;
+        let quantity : number = 0;
+        let trovato : boolean = false;
 
         this.carrello.listaProdotti.forEach( 
             p => 
             {
-                if(p[0] == prodotto)
-                {
-                    quantity = p[1];
-                } else
-                {
-                    quantity = -1;
+                if(!trovato){
+                    quantity = 0;
+
+                    if(p[0] == prodotto)
+                    {
+                        quantity = p[1];
+                        trovato = true;
+                    } else
+                    {
+                        quantity = -1;
+                    }
                 }
             } 
         )
-
+        
         return quantity;
     }
 }

@@ -1,6 +1,6 @@
 .scale-02
 {
-    width : 10%;
+    width : 20%;
 }
 
 .titolo{
@@ -24,4 +24,12 @@
 .prezzo{
     font-size: 18px;
     line-height: 18px;
+}
+
+.delete-icon:hover{
+    color:red;
+}
+
+.delete-icon{
+    transition: color 0.3s linear;
 }

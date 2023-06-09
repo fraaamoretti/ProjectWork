@@ -28,7 +28,26 @@
     border-radius: 10px;
 }
 
-.clickable
+.clickable{ cursor: pointer; }
+.w-33 { width: 33%; }
+
+.btn-green
 {
-    cursor: pointer;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+    background-color :#87A878;
+
+    transition: background-color 0.15s linear;
+    transition: border 0.05s linear;
+}
+
+.btn-green:hover
+{
+    background-color :#DBF9B8;
+}
+
+.btn-green:active
+{
+    border: 1px blue solid;
 }
