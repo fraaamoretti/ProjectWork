@@ -17,7 +17,6 @@ export class ElencoProdottiCategoriaComponent {
         if(p['categoriaDiRicerca'] == undefined){
           this.prodotti = this.prodService.magazzino;
         }else{
-          console.log(p['categoriaDiRicerca']);
           this.prodotti = this.prodService.filtraCateg(p['categoriaDiRicerca']);
         }
       })
