@@ -1,7 +1,7 @@
-<select type="button" class="form-select btn-categorie txt-dark-green" [(ngModel)]="categoriaDiRicerca" (ngModelChange)="cercaCategoria()">
-    <option selected class="txt-white">Tutte le categorie</option>
+<select type="button" class="form-select btn-categorie txt-black" [(ngModel)]="categoriaDiRicerca" (ngModelChange)="cercaCategoria()">
+    <option selected class="option">Tutte le categorie</option>
         <ng-container *ngFor="let c of prodottiService.getCategorie()">
-            <option>{{c}}</option>
+            <option class="option">{{c}}</option>
         </ng-container>
     <option>Preferiti</option>
 </select>
