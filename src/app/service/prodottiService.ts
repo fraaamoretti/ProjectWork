@@ -66,7 +66,7 @@ export class ProdottiService {
 
     filtraCateg(categoriaDiRicerca: string): Prodotto[] {
         let ret : Prodotto[] = [];
-        if(categoriaDiRicerca == 'Categorie'){
+        if(categoriaDiRicerca == 'Tutte le categorie'){
             return this.magazzino;
         }
         for(let p of this.magazzino){
