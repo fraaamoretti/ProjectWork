@@ -65,9 +65,9 @@ export class ProdottiService {
     }
 
     filtraCateg(categoriaDiRicerca: string): Prodotto[] {
-        console.log(categoriaDiRicerca);
+        //console.log(categoriaDiRicerca);
         return this.magazzino.filter(p => {
-            Categorie[p.categoria] === categoriaDiRicerca;
+            'a' === 'a';
         })
     }
 
