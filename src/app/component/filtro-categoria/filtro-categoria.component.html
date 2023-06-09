@@ -1,5 +1,5 @@
 <select type="button" class="btn btn-primary" [(ngModel)]="categoriaDiRicerca" (ngModelChange)="cercaCategoria()">
-    <option selected>Categorie</option>
+    <option selected>Tutte le categorie</option>
         <ng-container *ngFor="let c of prodottiService.getCategorie()">
             <option >{{c}}</option>
         </ng-container>

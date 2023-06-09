@@ -7,7 +7,7 @@ import { ProdottiService } from 'src/app/service/prodottiService';
   styleUrls: ['./filtro-categoria.component.css']
 })
 export class FiltroCategoriaComponent {
-  categoriaDiRicerca : string = "";
+  categoriaDiRicerca : string = "Tutte le categorie";
   @Output() cercaEvent = new EventEmitter();
 
 
