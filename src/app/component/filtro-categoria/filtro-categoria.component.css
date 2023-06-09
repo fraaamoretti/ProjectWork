@@ -5,7 +5,14 @@ option {
 }
 
 .btn-categorie{
-    background-color : #87A878;
+    background-color : #DBF9B8;
     border: none;
     border-radius: 20% 0 0 20%;
+    
+    transition: background-color 0.15s linear;
+}
+
+.btn-categorie:hover{
+    
+    background-color: #54644D;
 }

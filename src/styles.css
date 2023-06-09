@@ -35,16 +35,15 @@
 {
     padding: 2%;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color :#87A878;
 
     transition: background-color 0.15s linear;
-    transition: border 0.05s linear;
 }
 
 .btn-green:hover
 {
-    background-color :#DBF9B8;
+    background-color: #DBF9B8;
 }
 
 .btn-green:active

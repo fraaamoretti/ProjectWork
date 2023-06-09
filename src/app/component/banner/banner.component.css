@@ -1,5 +1,5 @@
 div > h1{font-size: 60px; line-height: 60px; margin: 0;}
-div > p{line-height: 60px; margin: 0;}
+div > p{line-height: 60px; margin: 0; font-size: 15px;}
 
 
 a:hover{

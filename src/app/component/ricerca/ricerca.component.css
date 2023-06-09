@@ -1,5 +1,10 @@
 .btn-search{
-    background-color : #DBF9B8;
+    background-color : #DBF9B8; 
     border: none;
     border-radius: 0 20% 20% 0;
+    transition: background-color 0.15s linear;
+}
+
+.btn-search:hover{
+    background-color: #54644D;
 }
