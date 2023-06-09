@@ -1,0 +1,6 @@
+<select type="button" class="btn bgc-light-green" [(ngModel)]="categoriaDiRicerca" (ngModelChange)="cercaCategoria()">
+    <option selected disabled>Categorie</option>
+        <ng-container *ngFor="let c of prodottiService.getCategorie()">
+            <option >{{c}}</option>
+        </ng-container>
+</select>

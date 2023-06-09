@@ -64,14 +64,14 @@ export class ProdottiService {
         return this.magazzino.filter(l => l.titolo.toLowerCase().includes(stringaDiRicerca.toLowerCase()) || l.autore.toLowerCase().includes(stringaDiRicerca.toLowerCase()))
     }
 
-    filtraCateg(categoriaDiRicerca: Categorie): Prodotto[] {
+    filtraCateg(categoriaDiRicerca: string): Prodotto[] {
         console.log(categoriaDiRicerca);
         return this.magazzino.filter(p => {
-            p.categoria === categoriaDiRicerca
+            Categorie[p.categoria] === categoriaDiRicerca;
         })
     }
 
-    getCategorie() : string[] {
+    getCategorie() : string[] { //solo visivo
         let ar : string[] = [];
         for(let c of Object.keys(Categorie)) {
             if(c.length > 3){  ar.push(c) }
