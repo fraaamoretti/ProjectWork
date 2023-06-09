@@ -16,15 +16,16 @@
 
       <ng-container *ngIf="prodotto; else elseBlock">
           <div class="clickable">
-            <a [routerLink]="['/prodotto',prodotto.id]">
-            <div class="div-card-img">
-              <img class="card-img-top h-100 w-100" [src] = "prodotto.img" [alt]="'foto di ' + prodotto.titolo">
-            </div>
+            <a [routerLink]="['/prodotto',prodotto.id]" class="txt-no-deco">
+              <div class="div-card-img">
+                <img class="card-img-top h-100 w-100" [src] = "prodotto.img" [alt]="'foto di ' + prodotto.titolo">
+              </div>
+              
+              <div class="card-body txt-black">
+                <h2 class="card-title">{{prodotto.titolo | tronca:14}}</h2>
+                <h4 class="card-text">{{prodotto.prezzo}}€</h4>
+              </div>
             </a>
-            <div class="card-body">
-              <h2 class="card-title">{{prodotto.titolo | tronca:14}}</h2>
-              <h4 class="card-text">{{prodotto.prezzo}}€</h4>
-          </div>
           
           </div>
         
