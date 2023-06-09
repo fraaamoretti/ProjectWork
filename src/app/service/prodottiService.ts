@@ -11,7 +11,7 @@ export class ProdottiService {
         new Prodotto(2, "Musica dall'alto", "Pietro Parcheggiatore", Categorie.Fantasy, 24, ["fantasy2.png"]),
         new Prodotto(3, "La biblioteca senza libri", "Jerry Mouse", Categorie.Giallo, 11, ["giallo1.png"]),
         new Prodotto(4, "Dov'è Ambda", "Genoveffa e' Maialj", Categorie.Giallo, 22, ["giallo2.png"]),
-        new Prodotto(5, "Ecco qui Ambda", "Genoveffa e' Maialj", Categorie.Giallo, 27, ["giallo3.png"], `Il famoso sequel del best seller "Dov'è Ambda", di Peppa Pig.`),
+        new Prodotto(5, "Ecco qui Ambda", "Genoveffa e' Maialj", Categorie.Giallo, 27, ["giallo3.png"], `Il famoso sequel del best seller "Dov'è Ambda", di Genoveffa e' Maialj.`),
         new Prodotto(6, "Love lasts", "Dante Manzoni", Categorie.Romanzo, 33, ["romanzo1.png"]),
         new Prodotto(7, "Incontriamoci sul treno", "Alessandro Alighieri", Categorie.Romanzo, 20, ["romanzo2.png"]),
         new Prodotto(8, "Viaggio su Giove", "Michele o' Topo", Categorie.Science, 27, ["science1.png"]),
