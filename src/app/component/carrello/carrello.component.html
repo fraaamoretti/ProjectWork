@@ -22,7 +22,13 @@
     <div class="totalPrice m-l border rounded p-3 d-flex flex-column">
         <h1>Totale provvisorio:</h1>
         <h3>{{calcolaTotale()}}€</h3>
-        <button class="btn-green align-self-center" [routerLink]="['/conferma']" (click)="elimina()">Compra subito</button>
+        <ng-container *ngIf="carrello.listaProdotti.length != 0; else elseBlock">
+            <button class="btn-green align-self-center" [routerLink]="['/conferma']" (click)="elimina()">Compra subito</button>
+        </ng-container>
+        <ng-template #elseBlock>
+            <button class="btn-green align-self-center"  disabled>Compra subito</button>
+        </ng-template>
+        
             
     </div>
 </div>
